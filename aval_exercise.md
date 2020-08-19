@@ -10,19 +10,13 @@ Here is a short summary of the three safety classes in the Norwegian Building co
  
 
 ## GIS project set up
-You will need a GIS to do this exercise. The setup and files were tested using QGIS 3.10.3 (Links to an external site.) and the following instructions are based on this version. If you have access to and prefer another GIS (e.g. ArcGIS) you are free to use it instead.
+You will need a QGIS to do this exercise. The setup and files were tested using QGIS 3.10.3 (Links to an external site.) and the following instructions are based on this version. If you prefer another GIS (e.g. ArcGIS) you are free to use it instead, but need to setup the project yourself.
 
-- First, you need to download the necessary data (Links to an external site.) and create a new GIS project. The coordinate reference system (CRS) is EPSG: 32633.
-- Once downloaded you should add the elevation, contours and slope maps from the dem folder. If you want, you can use the style files for the elevation and slope maps in the styles folder. You can apply a style file to a layer by choosing Symbology - Style - Load Style.... The hillshade could also be useful when presenting your maps.
-- Next you should add information on the infrastructure in and around Longyearbyen. Vector files on buildings, roads and water bodies are in the folder infrastructure.
-- Finally you can add delineations of avalanche hazard zones (S1, S2 and S3) from the folder hazard_zones. There should be a style file for each zone in the folder styles.
-
-__HINT:__ We will only work in the vicinity of the mountain Sukkertoppen. To get the right map extent, you can therefore right-click the layer slope_sukkertoppen and choose Zoom to layer.
+You need to download the necessary [data](https://github.com/kmunve/iearth_aval_exercise/data) and open the GIS project file *aval_exercise.qgs*. The coordinate reference system (CRS) is *EPSG: 32633*.
 
 Your project should look something like the figure below.
 
 ![](img/project_setup.png)
-
 
 You are now ready to start the exercise.
 
