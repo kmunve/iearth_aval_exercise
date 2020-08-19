@@ -27,39 +27,32 @@ You are now ready to start the exercise.
 
 2) Look at the given hazard zones. Provide a table that shows how many houses are threatened by avalanches from Sukkertoppen within each hazard zone S1 to S3.
 
-3) Get an overview of the data and write a short description of the setting. E.g. "Sukkertoppen has an elevation of.... Avalanche starting zones are situated between ... masl and ... m.a.s.l. X houses are in fall line of potential avalanches...".
+3) Get an overview of the data and write a short description of the setting. E.g. *"Sukkertoppen has an elevation of.... Avalanche starting zones are situated between ... masl and ... m.a.s.l. X houses are in fall line of potential avalanches..."*.
 
 ### Task B: Avalanche modelling
-There are three avalanche events that were modelled using [RAMMS](https://ramms.slf.ch/ramms/). These should be representative for each return period in the hazaard zoning: a smaller event representative of a 100 year event, a larger event representative of a 1000 year event and a very large event representative of a 5000 year event.
+There are three avalanche events that were modelled using [RAMMS](https://ramms.slf.ch/ramms/). These should be representative for the three safety classes in the Norwegian Building code: a smaller event representative of a 100 year event, a larger event representative of a 1000 year event and a very large event representative of a 5000 year event.
 
-Table 1 shows details on the model setup.
+The following table summarizes the model setup.
 
-|Mu/Xi name	|Return period	|Avalanche volume category	|Altitude limits 1	|Altitude limits 2|
-|----|----|----|----|----|
-|100S_150_50	|100 years	|small	|150 masl	|50 masl|
-|300M_150_50	|300 years	|medium	|150 masl	|50 masl|
-
-Run simulations with two different release heights for each return period. Six simulations in total. You can either use the release heights suggest in the next table or make you own (realistic) estimates. You can set/change the release height in RAMMS by right-clicking your release-shapefile and choosing Release properties. Here you also get information on mean slope and altitude and the release volume, which might be interesting to note.
-
-|Event	|mu/xi file	|Release depth|
-|---|---|---|
-|100 year event A	|100S_150_50	|40 cm|
-|100 year event B	|100S_150_50	|70 cm|
-|1000 year event A	|300M_150_50	|120 cm|
-|1000 year event B	|300M_150_50	|150 cm|
-|5000 year event A	|300M_150_50	|190 cm|
-|5000 year event B	|300M_150_50	|220 cm|
+|Event name	|Return period	|Avalanche volume category |Release depth|
+|---|---|---|---|
+|100 year event A	100S_150_50|100 years	|small		|40 cm|
+|100 year event B	100S_150_50|100 years	|small		|70 cm|
+|1000 year event A	300M_150_50|300 years	|medium		|120 cm|
+|1000 year event B	300M_150_50	|300 years	|medium	|150 cm|
+|5000 year event A	300M_150_50	|300 years	|medium	|190 cm|
+|5000 year event B	300M_150_50|300 years	|medium		|220 cm|
 
 Each simulation provides deposition height, velocity and impact pressure as a separate layer.
 
+1) Inspect each simulation. Describe the maximum velocity, impact pressure and height of debris in a short paragraph or table. When using QGIS you can view the layer statistics at *Properties... - Information*. How much does the choice of release depth affect your model results? How would you assess the release depth?
+
 ### Task C: Hazard mapping and avalanche protection
-1) Add the exported ASCII files to your project and describe the properties of each simulation such as maximum velocity, impact pressure and height of debris in a short paragraph or table. When using QGIS you can view the layer statistics at Properties... - Information. How much does the choice of release depth affect your model results? How would you assess the release depth?
+1) Compare the simulated avalanche events to the hazard zone for the respective return period. A wooden structure such as most houses in Longyearbyen would not withstand an impact pressure of more than 10-15 kPa. Based on this knowledge and the given simulations, would you adjust the given hazard zones? If yes, draw your suggestion for different hazard zones on the map? Write a short explanation for your choice. __HINT:__ Use the style aval_pressure_categorical or set the transparency for pressures below 10 kPa to 100% so you easily see that boundary.
 
-2) Compare the simulated avalanche events to the hazard zone for the respective return period. A wooden structure such as most houses in Longyearbyen would not withstand an impact pressure of more than 10-15 kPa. Based on this knowledge and the given simulations, would you adjust the given hazard zones? If yes, draw your suggestion for different hazard zones on the map? Write a short explanation for your choice. __HINT:__ Use the style aval_pressure_categorical or set the transparency for pressures below 10 kPa to 100% so you easily see that boundary.
+2) Protection measures are necessary. Estimate the height of a protection dam situated approximately where the impact pressure of your largest simulated 1000 year avalanche is around 30 kPa. Use the formula from the lecture assuming a snow depth of 1 m. __HINT:__ Consult the velocity and flow height data from your simulation.
 
-3) Protection measures are necessary. Estimate the height of a protection dam situated approximately where the impact pressure of your largest simulated 1000 year avalanche is around 30 kPa. Use the formula from the lecture assuming a snow depth of 1 m. __HINT:__ Consult the velocity and flow height data from your simulation.
-
-4) Estimate the cost for building your dam. Assume a price tag of 12,000 NOK for each meter in length and height. E.g. a 10 m wide and 2 m high dam would cost 240,000 NOK.
+3) Estimate the cost for building your dam. Assume a price tag of 12,000 NOK for each meter in length and height. E.g. a 10 m wide and 2 m high dam would cost 240,000 NOK.
 
 ### Task D: Report
 Compile your work process and findings in a report. The report should include an introduction describing the setting and challenges. It should describe your methods and you should briefly discuss potential weaknesses, assumptions and uncertainties. Conclude with your recommendation for hazard maps and protection measures. Illustrate your work by using maps, tables and figures from exercises A-C.
